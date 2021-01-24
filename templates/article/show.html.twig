@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title article.titre  %}
+
+{% block body %}
+
+    <h1> Article  {{ article.id }} </h1>
+
+    <h2> {{ article.titre }} </h2>
+    <p> {{ article.description }} </p>
+
+    <a href="{{ path('app_article_edit', {'id': article.id}) }}">Modifier</a> |
+    <a href="#" onclick="event.preventDefault(); confirm('Êtes vous sûr de supprimer') && document.getElementById('js-article').submit();">Supprimer</a>
+
+    <form id="js-article" action="{{ path('app_article_delete', {'id': article.id}) }}" method="post" style="display: none;">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token('article_deletion_' ~ article.id) }}">
+        <input type="hidden" name="_method" value="DELETE">
+    </form>
+
+    
+
+{% endblock %}

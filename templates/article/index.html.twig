@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title "Leaning SYmfony with Artcle_App" %}
+
+{% block body %}
+
+    <h1> {{ articles | length }} Articles </h1>
+
+    {% for article in articles %}
+        <article>
+            <h1> <a href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.titre }}</a>  </h1>
+            <p> {{ article.description }} </p>
+        </article>
+    {% endfor %}
+    
+{% endblock %}

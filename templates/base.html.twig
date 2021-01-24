@@ -8,6 +8,11 @@
         {% block javascripts %}{% endblock %}
     </head>
     <body>
+
+        <nav>
+            <a href="{{ path('app_home') }}">Accueil</a>
+            <a href="{{ path('app_article_create') }}">Nouvelle article</a>
+        </nav>
         {% block body %}{% endblock %}
     </body>
 </html>

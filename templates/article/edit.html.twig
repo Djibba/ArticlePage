@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title "Modification d'un article" %}
+
+{% block body %}
+
+    <h1>Modification de l'article</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        
+        <input type="submit" value="Modifier" formnovalidate>
+    {{ form_end(form) }}
+
+{% endblock %}
