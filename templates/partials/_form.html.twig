@@ -1,5 +1,7 @@
+
+
 {{ form_start(form) }}
     {{ form_widget(form) }}
 
-    <input type="submit" value="Créer" formnovalidate>
+    <input type="submit"  value="{{ submitButtonText }}" class="btn btn-primary btn-block" formnovalidate>
 {{ form_end(form) }}

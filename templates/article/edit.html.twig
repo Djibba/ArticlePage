@@ -4,12 +4,12 @@
 
 {% block body %}
 
-    <h1>Modification de l'article</h1>
+<div class="row">
+    <div class="col-md-6 mx-auto">
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        
-        <input type="submit" value="Modifier" formnovalidate>
-    {{ form_end(form) }}
+        <h1>Modification de l'article</h1>
 
+        {{ include('partials/_form.html.twig', { 'submitButtonText': 'Modifier'}) }}
+    </div>
+</div>
 {% endblock %}

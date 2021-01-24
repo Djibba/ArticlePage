@@ -41,6 +41,8 @@ class ArticleController extends AbstractController
             $manager->persist($article);
             $manager->flush();
 
+            $this->addFlash('success', 'Article créé avec succès');
+
             return $this->redirectToRoute('app_home');
         }
         
@@ -75,6 +77,8 @@ class ArticleController extends AbstractController
             
             $manager->flush();
 
+            $this->addFlash('success', 'Article modifié avec succès');
+
             return $this->redirectToRoute('app_home');
         }
 
@@ -93,6 +97,7 @@ class ArticleController extends AbstractController
             $manager->remove($article);
             $manager->flush();    
             
+            $this->addFlash('info', 'Article supprimé avec succès');
         }
         
         

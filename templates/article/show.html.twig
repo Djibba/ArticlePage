@@ -4,9 +4,7 @@
 
 {% block body %}
 
-    <h1> Article  {{ article.id }} </h1>
-
-    <h2> {{ article.titre }} </h2>
+    <h1> {{ article.titre }} </h1>
     <p> {{ article.description }} </p>
 
     <a href="{{ path('app_article_edit', {'id': article.id}) }}">Modifier</a> |
