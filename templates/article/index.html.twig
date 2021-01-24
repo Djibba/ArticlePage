@@ -9,7 +9,8 @@
     {% for article in articles %}
         <article>
             <h1> <a href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.titre }}</a>  </h1>
-            <p> {{ article.description }} </p>
+            <p> {{ article.description | u.truncate(10, '...', false)}} </p>
+            <p>Créé {{ article.createdAt | ago }}</p>
         </article>
     {% endfor %}
     
