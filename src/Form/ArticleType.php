@@ -14,13 +14,13 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('imageFile', VichImageType::class, [
+                'label' => 'Image (JPG ou PNG)',
                 'required' => false,
                 'allow_delete' => true,
-                'delete_label' => '...',
-                'download_label' => '...',
-                'download_uri' => true,
-                'image_uri' => true,
-                'asset_helper' => true,
+                'delete_label' => 'Supprimer l\'image',
+                'download_label' => 'Télécharger',
+                'download_uri' => false,
+                'imagine_pattern' => 'squared_thumbnail_medium'
             ])
             ->add('titre')
             ->add('description')
