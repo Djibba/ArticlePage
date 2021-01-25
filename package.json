@@ -3,7 +3,9 @@
         "@symfony/stimulus-bridge": "^1.1.0",
         "@symfony/webpack-encore": "^0.32.0",
         "core-js": "^3.0.0",
+        "node-sass": "^5.0.0",
         "regenerator-runtime": "^0.13.2",
+        "sass-loader": "^9.0.3",
         "stimulus": "^2.0.0",
         "webpack-notifier": "^1.6.0"
     },
@@ -14,5 +16,10 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
+    },
+    "dependencies": {
+        "bootstrap": "^4.6.0",
+        "jquery": "^3.5.1",
+        "popper.js": "^1.16.1"
     }
 }
