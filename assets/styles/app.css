@@ -20,3 +20,11 @@
 .vich-image .form-check {
     margin-top: 20px;
 }
+
+.article img:hover {
+    transform: scale(1.075);
+}
+
+.article img {
+    transition: transform 0.3s ease-out;
+}
