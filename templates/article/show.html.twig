@@ -4,19 +4,37 @@
 
 {% block body %}
 
-    <img src="{{ (article.imageName ? vich_uploader_asset(article) : asset('images/image4.jpg')) | imagine_filter('squared_thumbnail_medium') }}"
-                        alt="{{ article.titre }}">
-    <h1> {{ article.titre }} </h1>
-    <p> {{ article.description }} </p>
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <article class="article bg-grey rounded shadow">
+            <div class="mw-100 overflow-hidden">
+                <a href="{{ path('app_article_show', {'id': article.id}) }}">
+                    <img src="{{ (article.imageName ? vich_uploader_asset(article) : asset('images/image4.jpg')) | imagine_filter('squared_thumbnail_smal') }}"
+                        alt="{{ article.titre }}" class="w-100 rounded-top" />
+                </a>
+            </div>
+            <h1 class="h3 pl-3 pb-3"> <a href="{{ path('app_article_show', {'id': article.id}) }}"
+                    class="text-secondary text-decoration-none">{{ article.titre }}</a> </h1>
+            <p class="pl-3 pb-3 text-muted">Créé {{ article.createdAt | ago }} par Djibba</p>
 
-    <a href="{{ path('app_article_edit', {'id': article.id}) }}">Modifier</a> |
-    <a href="#" onclick="event.preventDefault(); confirm('Êtes vous sûr de supprimer') && document.getElementById('js-article').submit();">Supprimer</a>
+            <p class="pl-3 pb3">
+                {{ article.description }}
+            </p>
 
-    <form id="js-article" action="{{ path('app_article_delete', {'id': article.id}) }}" method="post" style="display: none;">
-        <input type="hidden" name="csrf_token" value="{{ csrf_token('article_deletion_' ~ article.id) }}">
-        <input type="hidden" name="_method" value="DELETE">
-    </form>
+            <div class="pl-3 pb-3">
+                <a href="{{ path('app_article_edit', {'id': article.id}) }}" class="btn btn-light">Modifier</a> |
+                <a href="#"
+                    onclick="event.preventDefault(); confirm('Êtes vous sûr de supprimer') && document.getElementById('js-article').submit();" class="btn btn-light">Supprimer</a>
 
-    
+                <form id="js-article" action="{{ path('app_article_delete', {'id': article.id}) }}" method="post"
+                    style="display: none;">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token('article_deletion_' ~ article.id) }}">
+                    <input type="hidden" name="_method" value="DELETE">
+                </form>
+            </div>
+
+        </article>
+    </div>
+</div>
 
 {% endblock %}
