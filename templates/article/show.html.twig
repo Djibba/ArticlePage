@@ -4,6 +4,8 @@
 
 {% block body %}
 
+    <img src="{{ (article.imageName ? vich_uploader_asset(article) : asset('images/image4.jpg')) | imagine_filter('squared_thumbnail_medium') }}"
+                        alt="{{ article.titre }}">
     <h1> {{ article.titre }} </h1>
     <p> {{ article.description }} </p>
 

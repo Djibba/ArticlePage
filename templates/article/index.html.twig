@@ -4,14 +4,27 @@
 
 {% block body %}
 
-    <h1> {{ articles | length }} Articles </h1>
-
-    {% for article in articles %}
-        <article>
-            <h1> <a href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.titre }}</a>  </h1>
-            <p> {{ article.description | u.truncate(10, '...', false)}} </p>
-            <p>Créé {{ article.createdAt | ago }}</p>
-        </article>
+{% if articles | length > 0 %}
+    <h1 class="mb-4 text-center"> {{ articles | length }} Articles </h1>
+    {% for row in articles|batch(3) %}
+    <div class="row mb-5">
+        {% for article in row %}
+        <div class="col-md-4">
+            <article class="bg-grey rounded shadow">
+                <a href="{{ path('app_article_show', {'id': article.id}) }}">
+                    <img src="{{ (article.imageName ? vich_uploader_asset(article) : asset('images/image4.jpg')) | imagine_filter('squared_thumbnail_medium') }}"
+                        alt="{{ article.titre }}" srcset="">
+                </a>
+                <h1> <a href="{{ path('app_article_show', {'id': article.id}) }}">{{ article.titre }}</a> </h1>
+                <p> {{ article.description | u.truncate(10, '...', false)}} </p>
+                <p>Créé {{ article.createdAt | ago }}</p>
+            </article>
+        </div>
+        {% endfor %}
+    </div>
     {% endfor %}
-    
+    {% else %}
+    <p class="mt-5 h1 text-center">Aucun article disponible <a href="{{ path('app_article_create') }}">Créer en un</a></p>
+{% endif %}
+
 {% endblock %}

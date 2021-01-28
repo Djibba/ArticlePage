@@ -16,3 +16,7 @@
 .alert-info {
     background-color: blue;
 }
+
+.vich-image .form-check {
+    margin-top: 20px;
+}
