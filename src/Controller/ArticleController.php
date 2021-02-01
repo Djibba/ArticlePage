@@ -83,7 +83,8 @@ class ArticleController extends AbstractController
         }
 
         return $this->render('article/edit.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'article' => $article
         ]);
     }
 

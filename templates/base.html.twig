@@ -14,16 +14,15 @@
  
 <body>
 
-    {% include "partials/_flash.html.twig" %}
     {% include "partials/_nav.html.twig" %}
+
+    {% include "partials/_flash.html.twig" %}
 
     <main role="main" class="container">
         {% block body %}{% endblock %}
     </main>
 
     {% include "partials/_footer.html.twig" %}
-
-
 
     {% block javascripts %}
         {{ encore_entry_script_tags('app')}}
