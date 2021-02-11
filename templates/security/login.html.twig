@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <h1 class="text-center pt-5">Se Connecter</h1>
+        <p class="pt-3 pb-3 text-muted text-center"> Vos artices vous attendent</p>
+        <form method="post">
+            {% if error %}
+            <div class="alert alert-error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="email" class="form-control" required
+                    autofocus>
+            </div>
+            <div class="form-group pb-4">
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password" class="form-control" required>
+            </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+            {# Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html #}
+
+            <div class="d-flex justify-content-between">
+                <div class="checkbox mb-3 form-group">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Remember me
+                    </label>
+                </div>
+                <a href="#">Mot de pas oublié?</a>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-lg btn-block btn-primary" type="submit">
+                    Connexion
+                </button>
+            </div>
+
+            <p class="text-center pt-5 text-muted">Pas de compte?
+                <a href="#">Créer un compte</a>
+            </p>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
