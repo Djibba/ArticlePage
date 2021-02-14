@@ -17,7 +17,7 @@
                             alt="{{ article.titre }}" class="w-100 rounded-top" />
                     </a>
                 </div>
-                <h1 class="h3 pl-3 pb-3"> <a href="{{ path('app_article_show', {'id': article.id}) }}" class="text-secondary text-decoration-none">{{ article.titre }}</a> </h1>
+                <h1 class="h3 pl-3 pt-3 pb-3"> <a href="{{ path('app_article_show', {'id': article.id}) }}" class="text-secondary text-decoration-none">{{ article.titre }}</a> </h1>
                 <p class="pl-3 pb-3 text-muted" >Créé {{ article.createdAt | ago }} par {{ article.user.firstName }} {{ article.user.lastName }} </p>
             </article>
         </div>
