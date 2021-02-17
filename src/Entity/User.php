@@ -34,7 +34,6 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
-     * @Assert\Length(min=3, minMessage="Ce champ doit contenir au moins 3 caractères")
      */
     private $lastName;
 
