@@ -28,3 +28,11 @@
 .article img {
     transition: transform 0.3s ease-out;
 }
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.nav-item {
+    font-size: 20px;
+}
