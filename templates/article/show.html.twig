@@ -23,10 +23,10 @@
                 </p>
 
                 <div>
-                    <a href="{{ path('app_article_edit', {'id': article.id}) }}" class="btn btn-light">Modifier</a> |
+                    <a href="{{ path('app_article_edit', {'id': article.id}) }}" class="btn btn-primary">Modifier</a> |
                     <a href="#"
                         onclick="event.preventDefault(); confirm('Êtes vous sûr de supprimer') && document.getElementById('js-article').submit();"
-                        class="btn btn-light">Supprimer</a>
+                        class="btn btn-primary">Supprimer</a>
 
                     <form id="js-article" action="{{ path('app_article_delete', {'id': article.id}) }}" method="post"
                         style="display: none;">
