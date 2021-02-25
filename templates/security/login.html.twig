@@ -10,7 +10,7 @@
         <p class="pt-3 pb-3 text-muted text-center"> Vos artices vous attendent</p>
         <form method="post">
             {% if error %}
-            <div class="alert alert-error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                <div class="alert alert-error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
             <div class="form-group">
                 <label for="email">Email</label>
