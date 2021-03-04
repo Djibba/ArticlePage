@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dd2bf1f44bbb4872cdf2274c6873f03",
+    "content-hash": "41cf1aedda0a6dad6adb45633ef03ca9",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -4353,16 +4353,16 @@
         },
         {
             "name": "symfony/mailer",
-            "version": "v5.2.1",
+            "version": "v5.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mailer.git",
-                "reference": "3f34fa977efca75ad17f1416ecb4605f27dbb75e"
+                "reference": "1efa11a8f59b8ba706aa6ee112c4675dce4dccf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mailer/zipball/3f34fa977efca75ad17f1416ecb4605f27dbb75e",
-                "reference": "3f34fa977efca75ad17f1416ecb4605f27dbb75e",
+                "url": "https://api.github.com/repos/symfony/mailer/zipball/1efa11a8f59b8ba706aa6ee112c4675dce4dccf6",
+                "reference": "1efa11a8f59b8ba706aa6ee112c4675dce4dccf6",
                 "shasum": ""
             },
             "require": {
@@ -4411,7 +4411,7 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Symfony Mailer Component",
+            "description": "Helps sending emails",
             "homepage": "https://symfony.com",
             "funding": [
                 {
@@ -4427,7 +4427,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-18T08:03:05+00:00"
+            "time": "2021-02-02T06:10:15+00:00"
         },
         {
             "name": "symfony/mime",
@@ -7367,6 +7367,53 @@
                 }
             ],
             "time": "2020-12-08T17:02:38+00:00"
+        },
+        {
+            "name": "symfonycasts/reset-password-bundle",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SymfonyCasts/reset-password-bundle.git",
+                "reference": "3040f3d98dae1167e3311d5d7fa5265e7d61ddbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SymfonyCasts/reset-password-bundle/zipball/3040f3d98dae1167e3311d5d7fa5265e7d61ddbe",
+                "reference": "3040f3d98dae1167e3311d5d7fa5265e7d61ddbe",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/config": "^4.4 | ^5.0",
+                "symfony/dependency-injection": "^4.4 | ^5.0",
+                "symfony/deprecation-contracts": "^2.2",
+                "symfony/http-kernel": "^4.4 | ^5.0"
+            },
+            "conflict": {
+                "doctrine/orm": "<2.7",
+                "symfony/framework-bundle": "<4.4",
+                "symfony/http-foundation": "<4.4"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "^2.0.3",
+                "doctrine/orm": "^2.7",
+                "friendsofphp/php-cs-fixer": "^2.17",
+                "symfony/framework-bundle": "^4.4 | ^5.0",
+                "symfony/phpunit-bridge": "^5.0",
+                "vimeo/psalm": "^4.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "SymfonyCasts\\Bundle\\ResetPassword\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Symfony bundle that adds password reset functionality.",
+            "time": "2021-02-17T16:33:50+00:00"
         },
         {
             "name": "symfonycasts/verify-email-bundle",
