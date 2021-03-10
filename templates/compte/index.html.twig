@@ -8,15 +8,13 @@
     <div class="col-md-6 mx-auto text-center">
         <h1 class="my-5">Profil</h1>
 
-        <img src="images/djib.jpg" alt="" class="w-100 shadow rounded-circle" />
-
         <h2 class="lead"> {{ app.user.email }} </h2>
 
         <hr>
 
-        <h2 class="lead"> {{ app.user.firstName}} {{ app.user.lastName }} </h2>
+        <h2 class="lead mt-5"> {{ app.user.firstName}} {{ app.user.lastName }} </h2>
 
-        <p><a href="{{ path('app_compte_edit') }}">Changer son profil</a> | <a href="#">Changer son mot de passe</a></p>
+        <p><a href="{{ path('app_compte_edit') }}">Changer son profil</a>   |    <a href="#">Changer son mot de passe</a></p>
     </div>
 </div>
 

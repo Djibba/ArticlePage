@@ -4,7 +4,7 @@
 
 {% block body %}
     <p>
-        L'email envoyé contient le lien où vous allez reinitialiser votre mot de passe en cliquant dessus.
+        L'email qui vous a été envoyé contient le lien où vous allez reinitialiser votre mot de passe en cliquant dessus.
         Le lien expirera après dans {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
     </p>
     <p>Si vous n'avez pas reçu un email, regardez dans vos spam ou <a href="{{ path('app_forgot_password_request') }}">essayer encore</a>.</p>
