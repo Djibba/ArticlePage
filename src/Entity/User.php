@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\HasLifecycleCallbacks
- * @UniqueEntity(fields={"email"}, message="Email existant.")
+ * @UniqueEntity(fields={"email"}, message="L'email existe déjà.")
  */
 class User implements UserInterface
 {

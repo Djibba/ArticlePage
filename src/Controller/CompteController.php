@@ -51,4 +51,14 @@ class CompteController extends AbstractController
             'user' => $user
         ]);
     }
+
+    /**
+     * @Route("/account/change-password", name="app_compte_change_password")
+     */
+    public function changePassword(): Response
+    {
+
+        return $this->render('compte/change.html.twig');
+    }
+
 }
