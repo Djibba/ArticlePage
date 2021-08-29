@@ -6,3 +6,9 @@
   
 ### Page d'accueil
  ![](https://github.com/Djibba/ArticlePage/blob/master/public/images/accueil.png)
+ 
+### Formulaire d'incription
+ ![](https://github.com/Djibba/ArticlePage/blob/master/public/images/form_inscription.png)
+
+### Formulaire de connexion
+![](https://github.com/Djibba/ArticlePage/blob/master/public/images/form_connexion.png)
