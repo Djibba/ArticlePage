@@ -12,3 +12,9 @@
 
 ### Formulaire de connexion
 ![](https://github.com/Djibba/ArticlePage/blob/master/public/images/form_connexion.png)
+
+### Formulaire de création d'article
+![](https://github.com/Djibba/ArticlePage/blob/master/public/images/form_creation_article.png)
+
+### Profil de l'utilisateur après connexion
+![](https://github.com/Djibba/ArticlePage/blob/master/public/images/profil_user.png)
