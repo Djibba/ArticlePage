@@ -18,3 +18,6 @@
 
 ### Profil de l'utilisateur après connexion
 ![](https://github.com/Djibba/ArticlePage/blob/master/public/images/profil_user.png)
+
+### Formulaire de modification de mot de passe de l'utilisateur
+![](https://github.com/Djibba/ArticlePage/blob/master/public/images/form_change_password.png)
