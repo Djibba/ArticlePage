@@ -9,12 +9,15 @@
  
 ### Formulaire d'incription
  ![](https://github.com/Djibba/ArticlePage/blob/master/public/images/form_inscription.png)
+ + Avec ce formulaire l'utilisateur peut s'inscrire afin d'avoir la possibilité de créer des articles propres à lui de les modifier ou de les supprimer.
 
 ### Formulaire de connexion
 ![](https://github.com/Djibba/ArticlePage/blob/master/public/images/form_connexion.png)
++ Ce formulaire permet à l'utilisateur de se connecter.
 
 ### Formulaire de création d'article
 ![](https://github.com/Djibba/ArticlePage/blob/master/public/images/form_creation_article.png)
++ Ce formulaire permet à l'utilisateur déja connecté de créer des articles.
 
 ### Profil de l'utilisateur après connexion
 ![](https://github.com/Djibba/ArticlePage/blob/master/public/images/profil_user.png)
